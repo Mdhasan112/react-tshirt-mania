@@ -9,17 +9,17 @@ const Home = () => {
     const [cart, setCart] = useState([]);
 
     const handleAddToCart = selectedItem => {
-        const exists= cart.find(tshirt => tshirt._id === selectedItem._id)
-        if(!exists) {
+        const exists = cart.find(tshirt => tshirt._id === selectedItem._id)
+        if (!exists) {
             const newCart = [...cart, selectedItem];
             setCart(newCart)
         }
-        else{
+        else {
             alert('Item already added')
         }
-       
+
     }
-    const handleRemoveCart= selectedItem =>{
+    const handleRemoveCart = selectedItem => {
         const rest = cart.filter(tshirt => tshirt._id !== selectedItem._id);
         setCart(rest)
     }
@@ -27,18 +27,18 @@ const Home = () => {
         <div className='home-container'>
             <div className="tshirt-container">
                 {
-                    tshirts.map(tshirt => <TShirt 
-                        key={tshirt._id} 
-                        tshirt={tshirt} 
+                    tshirts.map(tshirt => <TShirt
+                        key={tshirt._id}
+                        tshirt={tshirt}
                         handleAddToCart={handleAddToCart}
-                        >
-                        </TShirt>)
+                    >
+                    </TShirt>)
                 }
             </div>
             <div className="cart-container">
-                <Cart 
-                cart={cart}
-                handleRemoveCart={handleRemoveCart}
+                <Cart
+                    cart={cart}
+                    handleRemoveCart={handleRemoveCart}
                 >
 
                 </Cart>
