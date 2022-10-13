@@ -1,6 +1,12 @@
-tshirt{
+.tshirt{
     height: 400px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: lightskyblue;
 }
 .tshirt img{
     height: 250px;
+    margin-top: 10px;
 }
