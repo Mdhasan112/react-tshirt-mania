@@ -4,9 +4,9 @@ import './Header.css'
 
 const Header = () => {
     return (
-        <div>
+        <div className='container'>
             <h1>Welcome to TShirt Mania</h1>
-            <nav>
+            <nav className='link'>
             <Link to='/home'>Home</Link>
             <Link to='/orderreview'>Order Review</Link>
             </nav>
